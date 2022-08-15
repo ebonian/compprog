@@ -13,7 +13,7 @@ t1 = h1*60*60 + m1*60 + s1
 t2 = h2*60*60 + m2*60 + s2
 
 # calculate time different
-dt = (t2-t1) if t2 > t1 else (24*60*60 + t2-t1)
+dt = (t2-t1) if t2 >= t1 else (24*60*60 + t2-t1)
 dh = dt // (60*60)
 dt -= dh * 60*60
 dm = dt//60

@@ -12,9 +12,6 @@ for uValue, vValue in zip(u, v):
   U.append(float(uValue))
   V.append(float(vValue))
 
-print(U)
-print(V)
-
 # define function of summing 3d vector
 def sumVector(u: list[float], v:list[float]) -> list[float]:
   sum = []
