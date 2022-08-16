@@ -1,39 +1,14 @@
 import math
 
-def findFraction(decimal: float, point: int, repeat: int):
-  X = decimal
-  nX = decimal * math.pow(10, repeat)
+[a, b, c] = input().split(",")
 
-  X = math.floor(X * math.pow(10, point)) / math.pow(10, point)
-  nX = math.floor(nX * math.pow(10, point)) / math.pow(10, point)
-  n = nX - X
-  d = math.pow(10, repeat) - 1
-  numerator = round(n, point)
-  denominator = d
+ib = b
+b = b if b else "0"
 
-  numerator *= math.pow(10, len(str(n).split(".")[1]))
-  denominator *= math.pow(10, len(str(n).split(".")[1]))
+n = int(b+c) - int(b)
+d = int(''.join(map(str,([9] * len(c)) + [0] * len(ib))))
+n = d * int(a) + n
 
-  return [numerator, denominator]
+divisor = math.gcd(n, d)
 
-def findGCD(n, d) -> int:
-  n = int(n)
-  d = int(d)
-  res = math.gcd(n, d)
-  return res
-
-def main():
-  decimal = input()
-  decimalList = decimal.split(",")
-  decimal = float(decimalList[0] + "." + decimalList[1] + decimalList[2] + decimalList[2])
-  decimal = abs(decimal)
-
-  decimal = findFraction(decimal, len(decimalList[1]), len(decimalList[2]))
-  numerator = decimal[0]
-  denominator = decimal[1]
-
-  divisor = findGCD(numerator, denominator)
-
-  print("%d / %d" % (int(numerator / divisor), int(denominator / divisor)))
-
-main()
+print("%d / %d" % (n//divisor, d//divisor))
