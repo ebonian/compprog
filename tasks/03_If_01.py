@@ -1,6 +1,8 @@
-char = input()
+# take the input of character
+character = input()
 
-tables = [
+# assign the faculty code and name to the list
+faculties_list = [
 "01",
 "The Sirindhorn Thai Language Institute",
 "02",
@@ -58,7 +60,8 @@ tables = [
 "Administration of Chulalongkorn University"
 ]
 
-if (char in tables):
+# check if character in faculties_list and print out the result
+if (character in faculties_list):
   print("OK")
 else:
   print("Error")

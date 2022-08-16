@@ -1,12 +1,14 @@
-s = float(input())
+# take the input of score
+score = float(input())
 
-if (s >= 80):
+# check score for each condition and print the result
+if (score >= 80):
   print("A")
-elif (s >= 70):
+elif (score >= 70):
   print("B")
-elif (s >= 60):
+elif (score >= 60):
   print("C")
-elif (s >= 50):
+elif (score >= 50):
   print("D")
 else:
   print("F")

@@ -1,5 +1,7 @@
+# take the input of weight
 w = int(input())
 
+# check weight for each condition and print out the result
 if (w <= 100):
   print(18)
 elif (100 < w <= 250):
