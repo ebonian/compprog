@@ -1,11 +1,10 @@
 d = input().split(" ")
 
 d = [int(x) for x in d]
-
-p = d[-1]
+n = len(d)
+p = d[n-1]
 i = -1
 j = 0
-n = len(d)
 
 while 1:
   if (j < n - 1):

@@ -1,14 +1,15 @@
+import re
+
 word = input()
+
 sentence = input()
 
-sentence = sentence.replace('"', "").replace('(', "").replace(')', "").replace(',', "").replace('.', "").replace("'", "")
+ans=0
 
-sentence = sentence.split(" ")
+sentence = re.split(r'\W',sentence)
 
-count = 0
-
-for w in sentence:
-  if (word == w):
-    count += 1
-
-print(count)
+for words in sentence:
+  if word == words:
+    ans+=1
+    
+print(ans)

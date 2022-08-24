@@ -9,4 +9,4 @@ if (len(key_string) == len(answer_string)):
       correct_answer += 1
   print(correct_answer)
 else:
-  print("Incomplete Answer")
+  print("Incomplete answer")
