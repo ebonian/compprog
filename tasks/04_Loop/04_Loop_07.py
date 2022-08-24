@@ -1,12 +1,14 @@
 a = float(input())
 
 initial_a = a
+
 L = 0
 n = 0
 
 while True:
   if a == 0:
     break
+
   else:
     a //= 10
     n += 1

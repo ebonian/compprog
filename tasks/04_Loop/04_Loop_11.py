@@ -9,6 +9,7 @@ result = []
 for i in range(len(user_input)):
   if user_input[i] == previos_character:
     counts += 1
+    
   else:
     result.append(previos_character + " " + str(counts))
     previos_character = user_input[i]
