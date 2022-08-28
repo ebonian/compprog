@@ -1,4 +1,0 @@
-Before ascending sort
-[('Aa', 811), ('Ab', 247), ('Ad', 777), ('Ac', 777), ('Ae', 1086)]
-After ascending sort
-[('Ab', 247), ('Ac', 777), ('Ad', 777), ('Aa', 811), ('Ae', 1086)]
