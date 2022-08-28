@@ -19,6 +19,7 @@ while (True):
 for student_uid in student_uids:
   for index in range(len(student_ids)):
     if (student_uid == student_ids[index]):
+      # check if its student_grades is not equal to A prevent index is out of range
       if (student_grades[index] != "A"):
         upgraded_grade = grade[grade.index(student_grades[index]) - 1]
         
