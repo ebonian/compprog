@@ -1,2 +1,7 @@
-a = []
-a[0] = "1"
+def function():
+  print("HIA")
+  return "fasdf"
+
+a = function()
+
+print(a)
