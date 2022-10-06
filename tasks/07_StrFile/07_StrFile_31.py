@@ -30,7 +30,7 @@ def pair(dna: str) -> int:
 
   for i in range(len(dna)):
     if (search_pair == dna[i:i+2]):
-      count+=1
+      count += 1
 
   return count
 
