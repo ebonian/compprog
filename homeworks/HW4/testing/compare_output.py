@@ -3,6 +3,7 @@ expected_f = "B.txt"
 
 
 def check_all():
+    count_error = 0
     with open(output_f, 'r', encoding="utf8") as t1, open(expected_f, 'r', encoding="utf8") as t2:
         fileone = t1.readlines()
         filetwo = t2.readlines()
@@ -10,10 +11,13 @@ def check_all():
     if range(len(fileone)) == range(len(filetwo)):
         for idx, (line1, line2) in enumerate(zip(fileone, filetwo)):
             if line1 != line2:
+                count_error += 1
                 print(idx+1, end=" ")
                 print(line1, end="")
                 print(idx+1, end=" ")
                 print(line2)
+        if count_error == 0:
+            print("Check Passed")
     else:
         print('Files are not the same length')
 

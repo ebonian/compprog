@@ -21,8 +21,8 @@ A,V
 A,W
 A,X
 A,Y
-A,Z
 B,A
+A,Z
 B,C
 B,D
 B,E
