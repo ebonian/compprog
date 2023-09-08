@@ -1,15 +1,17 @@
-# Computer Programming on Y1 Repository
+# Computer Programming Class Archive
 
-This repository contains the code for the Computer Programming class in the first year of the Engineering course.
+This repository contains all the code I wrote for my computer programming classes at International School of Engineering, Chulalongkorn University.
+
+Feel free to take examples from this repository.
 
 ## What's inside
 
-`examination` contains the code for the examination.
-
-`homework` contains the code for the homework.
-
-`lab` contains the code for the lab.
-
-`practice` contains the code for the practice.
-
-Feel free to use the code for your own purposes.
+```
+├── Y1
+│   ├── examination
+│   ├── grader
+│   ├── homework
+│   └── lab
+└── Y2
+    └── lab
+```
