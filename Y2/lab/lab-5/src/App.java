@@ -21,5 +21,15 @@ public class App {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+        try {
+            transactionManager.transferFunds("Wallet3", "Wallet1", 100.0);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        try {
+            transactionManager.transferFunds("Wallet5", "Wallet1", 100.0);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 }

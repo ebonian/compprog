@@ -5,19 +5,19 @@ public class SimpleTransactionManager implements TransactionManager {
     private int transactionCount;
 
     public SimpleTransactionManager(String[] wallets) {
-        this.wallets = new String[10];
+        this.wallets = new String[1000];
 
         for (int i = 0; i < wallets.length; i++) {
             this.wallets[i] = wallets[i];
         }
 
-        this.transactions = new String[100];
+        this.transactions = new String[10000];
         this.walletCount = wallets.length;
         this.transactionCount = 0;
 
     }
 
-    public boolean transferFunds(String senderWalletId, String receiverWalletId, double amount) {
+    public boolean transferFunds(String senderWalletId, String receiverWalletId, double amount) throws Exception {
         if (!this.isValidWallet(senderWalletId)) {
             throw new IllegalArgumentException("Sender wallet is invalid");
         }
@@ -38,7 +38,7 @@ public class SimpleTransactionManager implements TransactionManager {
         return true;
     }
 
-    public double getBalance(String walletId) {
+    public double getBalance(String walletId) throws Exception {
         if (!isValidWallet(walletId)) {
             throw new IllegalArgumentException("Invalid wallet ID.");
         }
