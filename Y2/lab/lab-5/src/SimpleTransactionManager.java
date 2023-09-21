@@ -19,7 +19,7 @@ public class SimpleTransactionManager implements TransactionManager {
 
     public boolean transferFunds(String senderWalletId, String receiverWalletId, double amount) throws Exception {
         if (!this.isValidWallet(senderWalletId)) {
-            throw new IllegalArgumentException("Sender wallet is invalid");
+            throw new IllegalArgumentException("Sender wallet does not exist.");
         }
 
         if (!this.isValidWallet(receiverWalletId)) {
@@ -28,7 +28,7 @@ public class SimpleTransactionManager implements TransactionManager {
         }
 
         if (this.getBalance(senderWalletId) < amount && !senderWalletId.equals("Wallet0")) {
-            throw new IllegalArgumentException("Insufficient funds");
+            throw new IllegalArgumentException("Not enough balance in the source wallet.");
         }
 
         this.transactions[this.transactionCount] = senderWalletId + "|" +
