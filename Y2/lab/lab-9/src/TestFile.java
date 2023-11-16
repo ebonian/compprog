@@ -2,9 +2,9 @@ import java.io.*;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class App {
+public class TestFile {
     public static void main(String[] args) {
-        App testApp = new App();
+        TestFile testApp = new TestFile();
 
         HashMap<String, int[]> allScores = testApp.readScoresFromFile("./data/student_scores.csv");
         printAllScores(allScores);
