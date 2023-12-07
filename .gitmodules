@@ -1,0 +1,3 @@
+[submodule "Y2/compprog-y2-project"]
+	path = Y2/compprog-y2-project
+	url = https://github.com/ebonian/compprog-y2-project.git
