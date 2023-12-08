@@ -1,0 +1,3 @@
+[submodule "Y2/project/where2kee"]
+	path = Y2/project/where2kee
+	url = https://github.com/ebonian/where2kee.git
