@@ -184,7 +184,7 @@ public class CDLinkedList {
 				prev2 = start2.previousNode,
 				next2 = end2.nextNode;
 
-		if (next1.previousNode.equals(prev2)) {
+		if (end1.equals(prev2)) {
 			next1 = start1;
 
 			end2.nextNode = start1;
