@@ -20,7 +20,7 @@ public class CDLinkedList {
 	public void makeEmpty() {
 		header.nextNode = header;
 		header.previousNode = header;
-		size =0;
+		size = 0;
 	}
 
 	// put in new data after the position of p.
@@ -56,7 +56,7 @@ public class CDLinkedList {
 
 	// return data stored at kth position.
 	public int findKth(int kthPosition) throws Exception {
-		if (kthPosition < 0 || kthPosition > size-1)
+		if (kthPosition < 0 || kthPosition > size - 1)
 			throw new Exception();// exit the method if the position is
 		// beyond the first/last possible
 		// position, throwing exception in the process.
@@ -161,4 +161,45 @@ public class CDLinkedList {
 
 	}
 
+	public void swapRange(Iterator s1, Iterator f1, Iterator s2, Iterator f2) throws Exception {
+		if (s1 == null || f1 == null || s2 == null || f2 == null) {
+			return;
+		}
+
+		if (!s1.hasNext() || !f1.hasNext() || !s2.hasNext() || !f2.hasNext()) {
+			return;
+		}
+
+		DListIterator itr1 = (DListIterator) s1,
+				itr2 = (DListIterator) f1,
+				itr3 = (DListIterator) s2,
+				itr4 = (DListIterator) f2;
+
+		DListNode start1 = itr1.currentNode,
+				end1 = itr2.currentNode,
+				start2 = itr3.currentNode,
+				end2 = itr4.currentNode,
+				prev1 = start1.previousNode,
+				next1 = end1.nextNode,
+				prev2 = start2.previousNode,
+				next2 = end2.nextNode;
+
+		if (next1.previousNode.equals(prev2)) {
+			next1 = start1;
+
+			end2.nextNode = start1;
+			start1.previousNode = end2;
+		} else {
+			end2.nextNode = next1;
+			next1.previousNode = end2;
+		}
+
+		prev1.nextNode = start2;
+		start2.previousNode = prev1;
+
+		prev2.nextNode = start1;
+		end1.nextNode = next2;
+		start1.previousNode = prev2;
+		next2.previousNode = end1;
+	}
 }
