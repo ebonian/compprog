@@ -40,39 +40,40 @@ public class TypingDeadList extends CDLinkedList {
 
 
 		//fill code
-		DListIterator startIterator = new DListIterator(header);
-		DListIterator endIterator = new DListIterator(header);
-		DListIterator iterator = new DListIterator(header);
-
-		boolean foundFirstChar = false;
-		boolean isWord = false;
-		int index = 0;
-
-		while (iterator.currentNode.nextNode.data != HEADERVALUE && iterator.currentNode.nextNode != header) {
-		    iterator.next();
-		    char currentChar = (char) iterator.currentNode.data;
-		    
-		    if (index == w.length()) {
-		        isWord = true;
-		        endIterator.currentNode = iterator.currentNode.previousNode;
-		        
-		        break;
-		    } else if (!foundFirstChar && currentChar == w.charAt(index)) {
-		        startIterator.currentNode = iterator.currentNode;
-		        foundFirstChar = true;
-		        
-		        index++;
-		    } else if (currentChar == w.charAt(index)) {
-		        index++;
-		    } else {
-		        foundFirstChar = false;
-		        index = 0;
-		    }
-		}
-
-		if (isWord) {
-		    start = startIterator;
-		    end = endIterator;
+		DListIterator itr = new DListIterator(header);
+		
+		while (true) { 
+			
+			//set iterator for start --> start = w[0]
+			if (itr.currentNode.data == w.charAt(0)) {
+				start = new DListIterator(itr.currentNode);
+			}
+			
+			//if have start and currentNode is the last letter in string w
+			if (start != null && itr.currentNode.data == w.charAt(w.length() - 1)) {
+				end = new DListIterator(itr.currentNode);
+			}
+			
+			itr.next();
+			
+			//if have start and currentNode circulates back to the first one
+			//set everything to null and break <-- from test case
+			if (start != null && itr.currentNode == header) {
+				start = null;
+				end = null;
+				break;
+			}
+			
+			//if we have start and end
+			if (end != null) {
+				break;
+			}
+			
+			//if it circulates back to the first one
+			if (itr.currentNode == header) {
+				break;
+			}
+			
 		}
 	}
 
