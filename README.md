@@ -17,9 +17,9 @@ Feel free to take examples, or contribute for any improvements and suggestions!
 
 ```
 ├── Y1
-│   ├── examination
+│   ├── exam
 │   ├── grader
-│   ├── homework
+│   ├── hw
 │   └── lab
 └── Y2
     ├── adv
