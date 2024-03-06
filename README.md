@@ -24,11 +24,9 @@ Feel free to take examples, or contribute for any improvements and suggestions!
 └── Y2
     ├── adv
     │   ├── lab
-    │   ├── project
-    │   └── lab
-    ├── ds
-    │   └── exam
-    │   └── hw
-    │   └── lab
-    └── project
+    │   └── project
+    └── ds
+        └── exam
+        └── hw
+        └── lab
 ```
