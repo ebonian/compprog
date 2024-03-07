@@ -217,8 +217,10 @@ public class BST {
 	}
 	
 	private int heightHelper(BSTNode n) {
-		if (n == null)
+		if (n == null) {
 			return -1;
+		}
+		
 		return 1 + Math.max(heightHelper(n.left), heightHelper(n.right));
 	}
 
